@@ -1,0 +1,15 @@
+<h1>タスク新規作成</h1>
+
+<%= form_with(model: @task, local: true) do |f| %>
+  <%= f.label :content, 'タスクを入力' %>
+  <%= f.text_field :content %>
+  
+  
+  <% if @task.errors.any? %>
+   <p>※何か入力してください。</p>
+<% end %>
+
+  <%= f.submit '登録' %>
+<% end %>
+
+<%= link_to '一覧に戻る', tasks_path %>
