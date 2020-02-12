@@ -49,8 +49,8 @@ test:
 #
 production:
   adapter: postgresql
-  encording:unicode
-  pool:5
+  encoding: unicode
+  pool: 5
   database: kadai-tasklist_production
   username: kadai-tasklist
   password: <%= ENV['KADAI-TASKLIST_DATABASE_PASSWORD'] %>
