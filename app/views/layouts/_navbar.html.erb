@@ -1,0 +1,10 @@
+<header>
+  <% if logged_in? %>
+    <p>ログイン完了ユーザ: <%= current_user.name %></p>
+  <% else %>
+    <%= link_to 'Sign up', signup_path %>
+  <% end %>
+
+  <p><%= link_to 'Logout', logout_path, method: :delete %></p>
+
+</header>
